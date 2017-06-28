@@ -1,0 +1,101 @@
+<div *ngIf="calendrier">
+  <div class="card">
+    <div class="card-header">Dates d'ouverture</div>
+    <div class="card-block">
+      <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th>Période</th>
+            <th>Dernière Visite</th>
+            <th>Lundi</th>
+            <th>Mardi</th>
+            <th>Mercredi</th>
+            <th>Jeudi</th>
+            <th>Vendredi</th>
+            <th>Samedi</th>
+            <th>Dimanche</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cal of calendrier">
+            <td>{{cal.periode}}</td>
+            <td>{{cal.derniereVisite}}</td>
+            <td *ngFor="let jour of cal.joursOuverture">
+              <span *ngIf="jour === true">
+                       <img src="src/img/check.png"  width="42px">
+                    </span>
+              <span *ngIf="jour === false">
+                       <img src="src/img/cross.png"  width="42px">
+                    </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="card-group">
+
+  <div class="card">
+    <div class="card-header">Tarifs Individuels</div>
+    <div class="card-block">
+      <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th>Adultes (+13 ans)</th>
+            <th>Enfants (5/12 ans)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>6,70€</td>
+            <td>3€</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+  <div class="card">
+    <div class="card-header">Tarifs Groupes</div>
+    <div class="card-block">
+      <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th>Minimun 10 Adultes (+13 ans))</th>
+            <th>Minimum 10 Enfants (5/12 ans)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5€</td>
+            <td>2,70€</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">Couple avec enfants</div>
+    <div class="card-block">
+      <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th>Un couple et leurs enfants (5/12 ans)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>17,90€</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

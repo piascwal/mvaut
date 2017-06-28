@@ -4,15 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { PlanBelvedereComponent } from './plan-belvedere/plan-belvedere.component';
+import { AppRoutingModule } from 'app/app-routing/app-routing.module';
+import { SituationGeographiqueComponent } from './situation-geographique/situation-geographique.component';
+import { DateTarifComponent } from './date-tarif/date-tarif.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PlanBelvedereComponent,
+    SituationGeographiqueComponent,
+    DateTarifComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
