@@ -8,6 +8,7 @@ import { PlanBelvedereComponent } from './plan-belvedere/plan-belvedere.componen
 import { AppRoutingModule } from 'app/app-routing/app-routing.module';
 import { SituationGeographiqueComponent } from './situation-geographique/situation-geographique.component';
 import { DateTarifComponent } from './date-tarif/date-tarif.component';
+import { LiensUtilesComponent } from './liens-utiles/liens-utiles.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { DateTarifComponent } from './date-tarif/date-tarif.component';
     PlanBelvedereComponent,
     SituationGeographiqueComponent,
     DateTarifComponent,
+    LiensUtilesComponent,
   ],
   imports: [
     BrowserModule,
