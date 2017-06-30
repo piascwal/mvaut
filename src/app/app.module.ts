@@ -16,7 +16,7 @@ import { LiensUtilesComponent } from './liens-utiles/liens-utiles.component';
     PlanBelvedereComponent,
     SituationGeographiqueComponent,
     DateTarifComponent,
-    LiensUtilesComponent,
+    LiensUtilesComponent
   ],
   imports: [
     BrowserModule,

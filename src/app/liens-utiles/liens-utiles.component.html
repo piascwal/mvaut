@@ -1,40 +1,15 @@
-<div class="card-columns">
-  
-    <div class="card">
-      <img class="card-img-top" src="http://www.lozere-tourisme.com/sites/lozere/themes/lozere2/logo.png">
-      <div class="card-block">
-        <h5 class="card-title">Comité Départemental du Tourisme</h5>
-        <p class="card-text">Pour découvrir la Lozère, découverte des Gorges du Tarn, Gorges de la Jonte, Vallée du Lot, Grands Causses, Cévennes et Mont-Lozère, Aubrac, Margeride</p>
-        <a href="http://www.lozere-tourisme.com/" class="btn btn-primary">Consulter</a>
+<div class="card-deck" *ngIf="liensUtiles">
+    <div class="card" *ngFor="let lien of liensUtiles" >
+      <div class="card-img-top" style=" height: 100px; overflow:hidden">
+      <img  src="{{lien.img}}" style="width: 100%">
       </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top" src="http://www.destinationsuddefrance.com/extension/sdfd/design/sdfd/images/logos/logo_SUDdeFRANCE.png" alt="Card image cap">
       <div class="card-block">
-        <h5 class="card-title">Comité Régional de Tourisme Languedoc Roussillon</h5>
-        <p class="card-text">A la découverte de la région Languedoc Roussillon, la septimanie</p>
-        <a href="http://www.destinationsuddefrance.com/" class="btn btn-primary">Consulter</a>
+        <h5 class="card-title">{{lien.titre}}</h5>
+        <p class="card-text">{{lien.description}}</p>
+       
       </div>
-    </div>
-
-    <div class="card">
-      <img class="card-img-top" src="http://www.lozere-resa.com/templates/bms/images/logo.png" alt="Card image cap">
-      <div class="card-block">
-        <h5 class="card-title">Loisirs Accueil Lozère</h5>
-        <p class="card-text">Préparez votre séjour en Lozère et trouvez l'hébergement afin de passer un magnifique séjour en Lozère.</p>
-        <a href="http://www.lozere-resa.com/" class="btn btn-primary">Consulter</a>
+      <div class="card-footer">
+         <a href="{{lien.url}}" class="btn btn-primary">Consulter</a>
       </div>
-    </div>
-
-     <div class="card">
-      <img class="card-img-top" src="http://www.canoelerozier.fr/normal_tarn-le-rozier.gif" alt="Card image cap">
-      <div class="card-block">
-        <h5 class="card-title">Office de Tourisme du Rozier</h5>
-        <a href="http://www.gorgesdutarn-sauveterre.com" class="btn btn-primary">Consulter</a>
-      </div>
-    </div>
-    
-    
-   
+    </div> 
 </div>
